@@ -1,0 +1,38 @@
+<div class="table-container">
+  <table class="table table-striped mt-4" *ngIf="carro?.carros">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Precio</th>
+        <th>Color</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let eje of carro?.carros; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ eje._id }}</td>
+        <td>{{ eje.marca }}</td>
+        <td>{{ eje.modelo }}</td>
+        <td>{{ eje.anio }}</td>
+        <td>{{ eje.precio }}</td>
+        <td>{{ eje.color }}</td>
+        <td>
+          
+          <button class="btn btn-outline-success btn-sm me-1" (click)="openModal(eje)">
+            <i class="fas fa-edit"></i> 
+          </button>
+          <button class="btn btn-outline-danger btn-sm" (click)="eliminarEjemplo(eje._id!)">
+            <i class="fas fa-trash-alt"></i> </button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">

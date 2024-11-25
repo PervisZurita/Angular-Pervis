@@ -1,0 +1,129 @@
+.table-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo degradado */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fondo blanco para resaltar la tabla */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0; /* Bordes más gruesos para mayor visibilidad */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.table th {
+    background: #2575fc; /* Fondo azul vibrante */
+    color: #ffffff; /* Texto blanco */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.table td {
+    font-size: 14px;
+    color: #333;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Fondo alternado claro */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #f1f5fc; /* Fondo alternado azul claro */
+}
+
+.table-striped tbody tr:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb); /* Degradado llamativo al pasar el ratón */
+    color: #ffffff; /* Texto blanco */
+    transform: scale(1.02); /* Pequeña animación de zoom */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.table-striped tbody tr:active {
+    transform: scale(1.05); /* Efecto al hacer clic */
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none; /* Eliminar bordes predeterminados */
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border: 2px solid #28a745;
+    background-color: transparent;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #ffffff;
+    transform: translateY(-2px); /* Efecto flotante */
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.me-1 {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        padding: 10px;
+    }
+    
+    .table th, .table td {
+        font-size: 12px; /* Ajuste en el tamaño de la fuente para pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
