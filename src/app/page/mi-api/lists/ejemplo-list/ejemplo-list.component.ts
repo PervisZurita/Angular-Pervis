@@ -7,7 +7,7 @@ import { ModalEditComponent } from '../modal-edit/modal-edit.component';
 @Component({
 selector: 'app-ejemplo-list',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf,ModalEditComponent],
   templateUrl: './ejemplo-list.component.html',
   styleUrls: ['./ejemplo-list.component.css']
 })
